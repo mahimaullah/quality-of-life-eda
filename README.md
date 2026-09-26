@@ -1,7 +1,7 @@
 # Quality of Life: A Data Integrity Control Framework
 
-An exploratory analysis of quality-of-life indicators across **236 countries and territories** —
-and, more to the point, a case study in what has to happen to a dataset before any of its numbers
+An exploratory analysis of quality-of-life indicators across **236 countries and territories**,
+and, specifically, a case study in what has to happen to a dataset before any of its numbers
 can be trusted. What started as a one-off cleanup is now a reusable control framework: 10 written
 controls, 4 severity tiers, and a one-page SOP.
 
