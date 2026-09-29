@@ -1,0 +1,11 @@
+control_id,control_name,tier,severity,findings,columns_affected,result,remediation
+DQ-001,PLACEHOLDER_ZERO,TIER 1,CRITICAL,422,9,FAIL,Replace the placeholder with NULL before any aggregation; never impute silently.
+DQ-006,TYPE_DRIFT,TIER 1,CRITICAL,2,2,FAIL,"Repair the underlying string defects, then cast explicitly and assert the dtype."
+DQ-008,COERCION_LOSS,TIER 1,CRITICAL,117,2,FAIL,Never use errors='coerce' without reconciling the parsed count against the source count.
+DQ-002,EMBEDDED_PREFIX,TIER 2,HIGH,114,1,FAIL,"Strip the prefix with a whitelist regex, then parse; reject anything still unparseable."
+DQ-003,GROUPED_NUMERIC,TIER 2,HIGH,3,1,FAIL,Remove grouping separators before parsing; assert the parsed count equals the source count.
+DQ-007,RANGE_VIOLATION,TIER 2,HIGH,8,2,FAIL,Quarantine the row and refer it to the source owner; do not clip to the boundary.
+DQ-004,QUOTE_WRAPPED,TIER 3,MEDIUM,9,9,FAIL,Strip the wrapping quote characters and re-assert the categorical domain.
+DQ-009,DOMAIN_VIOLATION,TIER 3,MEDIUM,0,0,PASS,Map to the declared domain where the intent is unambiguous; otherwise quarantine.
+DQ-010,PAIR_INCONSISTENCY,TIER 3,MEDIUM,10,4,FAIL,Re-derive the category from the value using the published tier boundaries.
+DQ-005,REQUIRED_NULL,TIER 4,LOW,9,9,FAIL,Leave as NULL and document the coverage rate; do not fill.
